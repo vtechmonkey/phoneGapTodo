@@ -1,0 +1,46 @@
+
+<!doctype html>
+<html lang="en" data-ng-app="ToDoApp">
+<head>
+	<meta charset="UTF-8">
+	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="angular.js"></script>
+    <script type="text/javascript" src="ngStorage.js"></script><!-- included angularjs ngStorage module that makes local storage simple to use-->
+    <script type="text/javascript" src="angular-route.js"></script>
+    <script type="text/javascript" src="angular-messages.js"></script>
+	<script type="text/javascript" src="modules/todo.js"></script>
+	<title>Much ToDo About Nothing</title>
+
+    <!-- code reused/adapted from
+    	example on angularjs.org 
+    	https://www.youtube.com/watch?v=FSOiVprDdj0 (John Maddalone Create a ToDo app)
+    	http://steinbring.net/2014/angularjs-exploring-ng-options-ng-model-and-the-ngstorage-module/
+    	http://stackoverflow.com/questions/16884544/javascript-splice-function-inside-foreach-loop-decrements-index
+    	http://www.yearofmoo.com/2014/09/taming-forms-in-angularjs-1-3.html-->
+
+    
+    <link  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link  href="todo.css" rel="stylesheet">
+
+	
+</head>
+<body>
+
+	
+						
+<div ng-view></div>
+ 
+
+
+
+
+<!--
+
+
+jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+     
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>
+</html>

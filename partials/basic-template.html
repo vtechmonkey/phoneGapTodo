@@ -1,0 +1,51 @@
+
+
+<div class="container" data-ng-controller="TodoController"><!--ng-cloak hides the flash of javascript when the page loads -->
+
+
+
+	<h2>
+		<ng-pluralize count="remaining()" when="{ 0: 'Anything to do?', 1: ' just one thing to do...', other: '{} things to do' }"></ng-pluralize>
+	</h2>
+
+	<form name="todoForm" ng-submit="addTodo()" class="css-form" novalidate >
+
+
+		<div ng-show="todoForm.new.$touched"><div ng-show="todoForm.new.$error.required">Add Your Item Below...</div></div><!--message appears if user clicks anywhere without entering a todo-->	
+
+		<input type="text"I class="newInput" name="new" placeholder="start typing..." autofocus data-ng-model="newTodo" required=""/>
+
+		<br>
+
+		<!--show priority level buttons when the 'new' input form has input-->	
+		<div class="animate-show" ng-show="todoForm.new.$dirty">
+			<h4>How important is {{newTodo}} ? </h4>
+
+
+		
+			<input type="radio" name="nb" ng-model="currentTodo.importance" value="very" required>Very</input>
+			<input type="radio" name="nb" ng-model="currentTodo.importance"value="quite" required>Quite</input>
+			<input type="radio" name="nb" ng-model="currentTodo.importance"value="meh" required>Meh</input>
+		</div>
+  		
+
+		
+		<button type="submit" class="btn btn-success" data-ng-disabled="todoForm.$invalid"  >Add To List</button><!--disables form if form not valid-->
+ 
+	</form>
+	
+	 
+	<ul>
+		<li data-ng-repeat="currentTodo in $storage.todo">			
+			<input type="checkbox" data-ng-model="currentTodo.done"/> <span ng-class="{'done':currentTodo.done}" >{{currentTodo.title}}. This Item is {{currentTodo.importance}} important.</span>
+	    </li>		
+	    	
+	</ul>
+ <button type="button"  class="btn btn-danger" ng-click="deleteDone()">Delete Completed <br/>for Evah!</button>
+
+
+ <a href="#/whatNow">Page with feck all on it</a>
+<!--add local storage partial faq-->
+
+
+ 

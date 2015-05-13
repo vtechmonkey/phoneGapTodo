@@ -1,0 +1,75 @@
+body {
+
+color:#434343;
+
+}
+
+.done {
+
+color:#dddddd;
+
+}
+
+
+.css-form input.ng-invalid.ng-touched {
+
+background-color: gainsboro;
+margin : .5em 0em;
+
+}
+
+input {
+
+margin : .5em 0em;
+border-radius: 4px;
+}
+
+input[type=checkbox], input[type=radio] {
+
+margin: 4px 5px 5px;
+margin-top: 1px \9;
+line-height: normal;
+
+}
+
+.animate-show {
+
+line-height: 20px;
+opacity: 1;
+padding: 10px;
+  
+}
+
+.animate-show {
+
+line-height: 20px;
+opacity: 1;
+padding: 10px;
+  
+}
+
+.animate-show.ng-hide-add.ng-hide-add-active,  
+.animate-show.ng-hide-remove.ng-hide-remove-active {
+
+-webkit-transition: all linear 0.5s;
+transition: all linear 0.5s;
+
+}
+
+
+.animate-show.ng-hide {
+
+line-height: 0;
+opacity: 0;
+padding: 0 10px;
+
+}
+
+ul {
+
+list-style-type: none;
+margin-top: 1em;
+padding-left: .5em;
+
+}
+
